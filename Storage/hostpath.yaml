@@ -1,0 +1,19 @@
+# according to srinath challa
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-hostpath
+spec:
+  containers:
+    - image: redis
+      name: redis-container
+      volumeMounts:
+        - mountPath: /test-mnt
+          name: test-vol
+  volumes:
+    - name: test-vol
+      hostPath:
+        # directory location on host
+        path: /test-vol
+
