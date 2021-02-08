@@ -58,7 +58,8 @@ Kubectl uses the Kubernetes API to interact with the cluster
 |` kubectl rollout status deployments/<deploymenty name>` ||
 |` kubectl rollout undo deployments/<deployment name> `| back to previous |
 |`   `||
-|`   `||
+|`  kubectl delete all --all `||
+|`kubectl get all`||
 
 
 ```
@@ -461,4 +462,12 @@ Pod will be automatically deleted if you delete the respective service. </br>
 #### Step:
 * Persistent Volume (PV) : 
     
-* 
+
+
+## Dynamic Provisioning :
+#### Lifecycle:
+* Admin setups up storage provisioner
+* Admin creates a StorageClass
+* User creates a PVC
+* K8s automatically creates a PV
+* Pod uses the PVC as a volume
