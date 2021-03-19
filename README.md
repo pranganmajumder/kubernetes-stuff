@@ -59,7 +59,9 @@ Kubectl uses the Kubernetes API to interact with the cluster
 |` kubectl rollout undo deployments/<deployment name> `| back to previous |
 |`   `||
 |`  kubectl delete all --all `||
+|`kubectl delete pv --all`||
 |`kubectl get all`||
+
 
 
 ```
@@ -471,3 +473,6 @@ Pod will be automatically deleted if you delete the respective service. </br>
 * User creates a PVC
 * K8s automatically creates a PV
 * Pod uses the PVC as a volume
+
+## Warning:
+* Delete pv before deleting PVC , In case of deleting PVC before PV , follow the given [link](https://stackoverflow.com/questions/51358856/kubernetes-cant-delete-persistentvolumeclaim-pvc)

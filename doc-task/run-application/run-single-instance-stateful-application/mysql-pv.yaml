@@ -1,5 +1,5 @@
 # Delete pv before deleting PVC
-# In case of deleting PVC before PV , follow the given linke:
+# In case of deleting PVC before PV , follow the given link:
 # https://stackoverflow.com/questions/51358856/kubernetes-cant-delete-persistentvolumeclaim-pvc
 
 apiVersion: v1
