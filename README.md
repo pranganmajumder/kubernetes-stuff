@@ -48,6 +48,7 @@ Kubectl uses the Kubernetes API to interact with the cluster
 |`kubectl describe `| show detailed information about a resource|
 |`kubectl describe deployment`||
 |` kubectl describe node <node name>  `|  |
+|`kubectl describe pod/redis-node-0 -n <namespace>` | to see all of the containers in this pod|
 |`kubectl -n kube-system get all`|get the dashboard info in terminal|
 |`curl $(minikube ip):$NODE_PORT`| to see the previously exposed IP and PORT|
 |______|__________|
